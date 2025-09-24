@@ -28,6 +28,12 @@ public class CatlogPage extends AndroidActions {
 	
 	@AndroidFindBy(id="com.androidsample.generalstore:id/btnProceed")
 	private WebElement visitWebsiteCta;
+	
+	@AndroidFindBy(id="")
+	private List<WebElement> pricevalue;
+	
+	@AndroidFindBy(id="")
+	private WebElement totalvalue;
 
 
 	public void addCartBtn(int index) {
@@ -40,6 +46,24 @@ public class CatlogPage extends AndroidActions {
 	
 	public void completePurchaseCta(){
 		visitWebsiteCta.click();
+	}
+	
+	public double SumOfPrice() {
+		int count = pricevalue.size();
+		double sum=0.0;
+		
+		for(int i=0;i<count;i++) {
+			String priceText=pricevalue.get(i).getText();
+			double priceValue= Double.parseDouble(priceText.substring(1));
+			sum=sum+priceValue;
+		}
+		return sum;
+	}
+	
+	public double totalValueDisplayed() {
+		String valuetxt=totalvalue.getText();
+		double valueDisplayed=Double.parseDouble(valuetxt.substring(1));
+		return valueDisplayed;
 	}
 	
 
