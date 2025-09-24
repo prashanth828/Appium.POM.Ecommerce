@@ -59,7 +59,8 @@ public class FormPage extends AndroidActions {
 			
 	}
 	
-	public void shopButton() {
+	public CatlogPage shopButton() {
 		shopBtn.click();
+		return new CatlogPage(driver);
 	}
 }

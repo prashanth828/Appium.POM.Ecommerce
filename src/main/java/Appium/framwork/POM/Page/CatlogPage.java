@@ -30,8 +30,8 @@ public class CatlogPage extends AndroidActions {
 	private WebElement visitWebsiteCta;
 
 
-	public void addCartBtn() {
-		clickAddCartBtn.get(0).click();
+	public void addCartBtn(int index) {
+		clickAddCartBtn.get(index).click();
 	}
 	
 	public void cartPage() {
