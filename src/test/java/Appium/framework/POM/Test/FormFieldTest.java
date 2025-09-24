@@ -16,12 +16,10 @@ public class FormFieldTest extends BaseTest
 		formPage.setNameField("Prashanth");
 		formPage.genderSelection("Female");
 		formPage.countrySelection("Benin");
-		formPage.shopButton();
+		CatlogPage prdcatlog=formPage.shopButton();
 		
-		CatlogPage prdcatlog=new CatlogPage(driver);
-		
-		prdcatlog.addCartBtn();
-		prdcatlog.addCartBtn();
+		prdcatlog.addCartBtn(0);
+		prdcatlog.addCartBtn(0);
 		prdcatlog.cartPage();
 		prdcatlog.completePurchaseCta();
 		
