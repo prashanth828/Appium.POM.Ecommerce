@@ -1,0 +1,12 @@
+<suite name="EcommerceSuite">
+  <test name="EcommerceTests">
+    <classes>
+      <class name="Prashanthshetty.Appium.Ecommerce">
+        <methods>
+          <include name="ecommerceT1"/>
+          <include name="ecommerceT2"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
